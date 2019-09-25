@@ -1,6 +1,6 @@
 <% 
     const orders = [
-        'JavaScript', 'Web', 'Front-end', 'React',
+        'Front-end', 'JavaScript', 'Web', 'React',
         'Algorithm', 'Others', 'Back-end', 'Android'
     ]
 
@@ -35,7 +35,8 @@
             <div class="archive content">
                 <h4 class="title is-4" id="<%= category %>"><%= category.name %></h4>
                 <div class="articles">
-                    <% category.posts.reverse().forEach(post => { %>
+                    <% const posts = category.posts.sort('date', -1); %>
+                    <% posts.forEach(post => { %>
                         <div class="article content flexbox">
                             <time class="is-text-small monospace mr1" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
                                 <%= format_date_normal(post.date) %></time>
