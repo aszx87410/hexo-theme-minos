@@ -63,7 +63,7 @@
             <% if (has_config('navbar_links')) {
                 for (let name in get_config('navbar_links')) {
                     let link = get_config('navbar_links')[name]; %>
-            <a class="navbar-item" title="<%= name %>" href="<%= typeof(link) === 'string' ? link : link.url%>">
+            <a class="navbar-item" target="_blank" title="<%= name %>" href="<%= typeof(link) === 'string' ? link : link.url%>">
                 <% if (typeof(link) === 'string') { %>
                 <%= name %>
                 <% } else { %>

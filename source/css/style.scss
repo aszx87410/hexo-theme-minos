@@ -2,8 +2,13 @@ $family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
 $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
+/* custom */
+body {
+    font-size: 1.1rem;
+}
+
 body, button, input, select, textarea {
-    font-family: $family-serif;
+    // font-family: $family-serif;
 }
 
 

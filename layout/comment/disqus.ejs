@@ -44,6 +44,8 @@ const SUPPORTED_LANGS = {
 };
 
 function getDisqusLanguage(language) {
+    // NOTE: 覆寫預設設定
+    return 'en'
     const variant = language.split(/[-_]/).map((l, i) => i === 0 ? l.toLowerCase() : l.toUpperCase()).join('_');
     if (SUPPORTED_LANGS.hasOwnProperty(variant)) {
         return variant;
