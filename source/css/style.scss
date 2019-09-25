@@ -68,7 +68,8 @@ a.tag.article-tag {
 
     .article-meta {
         font-size: .9rem;
-        text-transform: uppercase;
+        // NOTE: disable
+        // text-transform: uppercase;
 
         @media screen and (max-width: 768px) {
             margin-top: 0.75rem;
@@ -317,7 +318,7 @@ a.tag.article-tag {
     .article {
         border-top: none;
         margin-left: -1px;
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         border-left: 3px solid transparent;
 
         &:hover {

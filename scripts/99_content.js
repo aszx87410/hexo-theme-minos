@@ -84,7 +84,7 @@ hexo.extend.helper.register('page_title', function () {
  * Format date to string without year.
  */
 hexo.extend.helper.register('format_date', injectMomentLocale(function (date) {
-    return moment(date).format('MMM Do');
+    return moment(date).format('MMMDo');
 }));
 
 /**
