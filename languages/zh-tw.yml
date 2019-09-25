@@ -1,6 +1,6 @@
 name: '繁體中文'
 common:
-  archives: '封存'
+  archives: '文章列表'
   category: '分類'
   tag: '標籤'
   categories: '分類'
