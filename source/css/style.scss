@@ -7,6 +7,22 @@ body {
     font-size: 1.1rem;
 }
 
+.w-100 {
+    width: 100px;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.mr1 {
+    margin-right: 1rem;
+}
+
+.section-categories .content, .article.content{
+    margin-bottom: 0;
+}
+
 body, button, input, select, textarea {
     // font-family: $family-serif;
 }
@@ -25,6 +41,10 @@ a.tag.article-tag {
 
     .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
         color: #3273dc;
+    }
+
+    .flexbox {
+        display: flex;
     }
 }
 
@@ -327,7 +347,7 @@ a.tag.article-tag {
 
         time {
             font-size: .9rem;
-            color: darkgray;
+            color: #888888; /* NOTE: 調暗一點 */
         }
 
         h6 {

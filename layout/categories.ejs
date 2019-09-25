@@ -1,3 +1,18 @@
+<% 
+    const orders = [
+        'JavaScript', 'Web', 'Front-end', 'React',
+        'Algorithm', 'Others', 'Back-end', 'Android'
+    ]
+
+    const categories = (page._categories || page.categories).sort(
+        (a, b) => {
+            const aIndex = orders.indexOf(a.name)
+            const bIndex = orders.indexOf(b.name)
+            if (aIndex === -1) return 1
+            if (bIndex === -1) return -1
+            return aIndex - bIndex  
+        })
+%>
 <section class="section section-heading">
     <div class="container">
         <div class="content">
@@ -5,14 +20,31 @@
         </div>
     </div>
 </section>
-<section class="section">
+<section class="section section-categories">
     <div class="container">
         <div class="columns is-variable is-1 is-multiline is-mobile">
-            <% (page._categories || page.categories).forEach(category => {%>
+            <% categories.forEach(category => {%>
             <span class="column is-narrow">
                 <a class="tag is-light article-tag" href="<%= url_for(category.path) %>"><%= category.name %>&nbsp;(<%= category.posts.length%>)</a>
             </span>
             <% }) %>
         </div>
-    </div>
+
+        <div>
+            <% categories.forEach(category => { %>
+            <div class="archive content">
+                <h4 class="title is-4" id="<%= category %>"><%= category.name %></h4>
+                <div class="articles">
+                    <% category.posts.reverse().forEach(post => { %>
+                        <div class="article content flexbox">
+                            <time class="is-text-small monospace mr1" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+                                <%= format_date_normal(post.date) %></time>
+                            <h6 class="title is-6"><a href="<%= url_for(post.link ? post.link : post.path) %>"><%= post.title %></a></h6>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+            <% }) %>
+            </div>
+        </div>
 </section>

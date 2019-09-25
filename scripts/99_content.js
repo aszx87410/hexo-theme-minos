@@ -84,7 +84,7 @@ hexo.extend.helper.register('page_title', function () {
  * Format date to string without year.
  */
 hexo.extend.helper.register('format_date', injectMomentLocale(function (date) {
-    return moment(date).format('MMMDo');
+    return moment(date).format('MM月DD日');
 }));
 
 /**
@@ -93,6 +93,10 @@ hexo.extend.helper.register('format_date', injectMomentLocale(function (date) {
  */
 hexo.extend.helper.register('format_date_full', injectMomentLocale(function (date) {
     return moment(date).format('LL') + '(' + moment(date).fromNow()  + ')';
+}));
+
+hexo.extend.helper.register('format_date_normal', injectMomentLocale(function (date) {
+    return moment(date).format('YYYY-MM-DD');
 }));
 
 /**
