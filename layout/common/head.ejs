@@ -52,7 +52,8 @@ if (languages.length > 1) {
 
 <%- css('css/style') %>
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<% /* NOTE: disable fontawesome
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>*/ %>
 
 <% if (has_config('plugins')) { %>
     <% for (let plugin in get_config('plugins')) { %>
