@@ -92,7 +92,7 @@ hexo.extend.helper.register('format_date', injectMomentLocale(function (date) {
  * NOTE: 更改格式
  */
 hexo.extend.helper.register('format_date_full', injectMomentLocale(function (date) {
-    return moment(date).format('LL') + '(' + moment(date).fromNow()  + ')';
+    return moment(date).format('LL');
 }));
 
 hexo.extend.helper.register('format_date_normal', injectMomentLocale(function (date) {
