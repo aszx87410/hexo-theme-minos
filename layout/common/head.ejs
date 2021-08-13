@@ -18,6 +18,10 @@ if (languages.length > 1) {
 <meta name="description" content="<%- get_config('description') %>">
 <% } %>
 
+<% if (has_config('canonical')) { %>
+<link rel="canonical" href="<%- get_config('canonical') %>">
+<% } %>
+
 <% if (has_config('keywords')) { %>
 <meta name="keywords" content="<%= get_config('keywords') %>">
 <% } %>
