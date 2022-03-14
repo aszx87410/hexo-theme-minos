@@ -3,6 +3,13 @@ $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
 /* custom */
+.custom-banner {
+    margin-bottom: 1rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+    background:#ffe4c4;
+}
+
 body {
     font-size: 1.1rem;
 }
