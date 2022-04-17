@@ -16,8 +16,6 @@ const MOMENTJS_SUPPORTED_LANGUAGES = ['af', 'ar-dz', 'ar-kw', 'ar-ly', 'ar-ma', 
     'zh-cn', 'zh-hk', 'zh-tw'];
 
 function getMomentLocale(language) {
-    // NOTE: 覆寫
-    return 'zh-tw';
     let locale = formatRfc5646(language);
     if (MOMENTJS_SUPPORTED_LANGUAGES.indexOf(locale) === -1) {
         if (MOMENTJS_SUPPORTED_LANGUAGES.indexOf(formatIso639(locale)) > -1) {
@@ -84,6 +82,10 @@ hexo.extend.helper.register('page_title', function () {
  * Format date to string without year.
  */
 hexo.extend.helper.register('format_date', injectMomentLocale(function (date) {
+    var lang = getPageLanguage(this.page)
+    if (lang === 'en') {
+        return moment(date).format('MMM DD');
+    }
     return moment(date).format('MM月DD日');
 }));
 

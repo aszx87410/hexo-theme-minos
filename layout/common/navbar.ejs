@@ -72,6 +72,13 @@
             </a>
                <% } %>
             <% } %>
+            <% if (page_language() === 'en') { %>
+               <a class="navbar-item" href="/">中文</a>
+            <% } else { %>
+                <a class="navbar-item" href="/en">English</a>
+            <% } %>
+            
+
         </div>
     </div>
 </nav>

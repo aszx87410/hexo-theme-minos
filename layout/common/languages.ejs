@@ -14,10 +14,11 @@ if (languages.length > 1) {%>
           </span>
             </button>
         </div>
-        <div class="dropdown-menu has-text-left" role="menu">
+        <div class="dropdown-menu has-text-left" role="menu" style="top:100%">
             <div class="dropdown-content">
+            <!-- NOTE: 永遠回到首頁 -->
             <% languages.forEach((language) => { %>
-                <a href="<%= url_for(i18n_path(!is_default_language(language) ? language : null)) %>" class="dropdown-item">
+                <a href="<%= !is_default_language(language) ? '/' + language : '/' %>" class="dropdown-item">
                     <%= language_name(language) %>
                 </a>
             <% }) %>
