@@ -28,6 +28,7 @@ if (languages.length > 1) {
 
 <% if (has_config('open_graph')) { %>
     <%- open_graph({
+        twitter_card: 'summary_large_image',
         twitter_id: get_config('open_graph.twitter_id', ''),
         twitter_site: get_config('open_graph.twitter_site', ''),
         google_plus: get_config('open_graph.google_plus', ''),
