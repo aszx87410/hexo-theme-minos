@@ -69,8 +69,10 @@
     });
 
     $('.article-entry').find('h1, h2, h3, h4, h5, h6').on('click', function () {
-        if ($(this).get(0).id) {
-            window.location.hash = $(this).get(0).id;
+        let id;
+        const span = $($(this).get(0)).find('span');
+        if (span && span.attr('id')) {
+            window.location.hash = span.attr('id');;
         }
     });
 
