@@ -46,9 +46,9 @@
             <% if (has_config('toc') && get_config('toc') === true && typeof(page.content) !== 'undefined') { %>
             <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
                 <a class="navbar-item" title="<%= __('nav.toc') %>">
-                    <i class="fa fa-list"></i>
+                    <%= __('nav.toc') %>
                 </a>
-                <div class="navbar-dropdown is-right">
+                <div class="navbar-dropdown">
                     <% let lastHeading = null; %>
                     <% for (let heading of toc_list(page.content)) { %>
                     <% if (lastHeading !== null && heading[0].split('.')[0] !== lastHeading) { %>

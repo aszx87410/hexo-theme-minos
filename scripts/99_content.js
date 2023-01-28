@@ -151,7 +151,7 @@ hexo.extend.helper.register('toc_list', (content) => {
     const headings = $(levelTags.join(','));
     headings.each(function () {
         const level = levelTags.indexOf(this.name);
-        const id = $(this).attr('id');
+        const id = $(this).attr('id') || $(this).find("span").attr('id');
         const text = _.escape($(this).text());
 
         for (let i = 0; i < levels.length; i++) {
