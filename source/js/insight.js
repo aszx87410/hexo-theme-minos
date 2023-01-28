@@ -1,6 +1,8 @@
 /**
  * Insight search plugin
  * @author PPOffice { @link https://github.com/ppoffice }
+
+ Huli: disable for now
  */
 (function ($, CONFIG) {
     var $main = $('.ins-search');
