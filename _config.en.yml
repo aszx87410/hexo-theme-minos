@@ -1,0 +1,75 @@
+# Website's icon url.
+favicon: /img/lidemy_logo.png 
+
+# Open Graph metadata (https://hexo.io/docs/helpers.html#open-graph)
+open_graph:
+  twitter_id:
+  twitter_site:
+  google_plus:
+  fb_admins:
+  fb_app_id:
+
+rss: /atom.xml
+
+# Website's logo shown on the left of the navigation bar.
+# It can either be an url to an image or a string if the following option is set.
+# logo:
+#   text: <logo string>
+logo:
+  text: Huli's blog
+
+article:
+  # Show word count and estimated reading time.
+  readtime: false
+  # Code highlight theme, please see https://highlightjs.org/static/demo/
+  highlight: tomorrow-night-eighties
+
+# Navigation bar menu links.
+menu:
+  Archive: /en/archives
+  Categories: /en/categories
+  About: /en/about
+
+# Search plugin settings.
+search:
+  #type: google-cse
+  #cx: 000864066023191638225:bkiqcm81ija
+
+# Navigation bar toc settings
+toc: true
+
+# Share plugin settings.
+share:
+  #type: sharethis
+  #install_url: https://platform-api.sharethis.com/js/sharethis.js#property=5d8b39b069ba670012bf92b9&product=inline-share-buttons
+
+# Comment plugin settings.
+comment:
+  type: utterances
+
+# Other plugins and their settings.
+plugins:
+  mathjax: false
+  katex: false
+  gallery: true
+  clipboard: true
+  google-analytics:
+    tracking_id: 'G-1393J2EVCZ'
+
+# Additional navigation bar links on the right.
+# Links can either be text or icon. The following link is set to be an icon link whose icon
+# is set to the class name of a FontAwesome 5 icon. The `footer_links` below also gives an
+# example of setting plain text links.
+navbar_links:
+
+  Twitter:
+    icon: fab fa-twitter
+    url: https://twitter.com/aszx87410
+
+  RSS:
+    icon: fas fa-rss
+    url: /atom.xml
+
+# Links at the bottom of the page.
+footer_links:
+  GitHub: https://github.com/ppoffice/hexo-theme-minos
