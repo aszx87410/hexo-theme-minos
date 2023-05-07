@@ -19,6 +19,10 @@ if (languages.length > 1) {
 
 <% if (has_config('canonical')) { %>
 <link rel="canonical" href="<%- get_config('canonical') %>">
+<% } else { %>
+    <% if(page.path) { %>
+<link rel="canonical" href="<%= (config.url + url_for(page.path)).replace('index.html','') %>">
+    <% } %>
 <% } %>
 
 <% if (has_config('keywords')) { %>
