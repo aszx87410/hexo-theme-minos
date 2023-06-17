@@ -20,8 +20,8 @@ logo:
 article:
   # Show word count and estimated reading time.
   readtime: false
-  # Code highlight theme, please see https://highlightjs.org/static/demo/
-  highlight: tomorrow-night-eighties
+  # Code highlight theme
+  highlight: prism-tomorrow
 
 # Navigation bar menu links.
 menu:

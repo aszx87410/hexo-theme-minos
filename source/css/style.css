@@ -15,6 +15,11 @@ body {
 .section-categories .content, .article.content {
   margin-bottom: 0; }
 
+/* override prism  */
+code[class*=language-], pre[class*=language-] {
+  font-size: 0.9rem;
+}
+
 /* customize icon font http://app.fontastic.me */
 @font-face {
   font-family: "untitled-font-1";

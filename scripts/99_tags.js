@@ -35,7 +35,7 @@ function patchCodeHighlight(content) {
     $('figure.highlight .code .line span').each(function () {
         const classes = $(this).attr('class').split(' ');
         if (classes.length === 1) {
-            $(this).addClass('hljs-' + classes[0]);
+            $(this).addClass('hljs1-' + classes[0]);
             $(this).removeClass(classes[0]);
         }
     });
@@ -47,7 +47,7 @@ function patchCodeHighlight(content) {
 * Note: must be put after the above escape patch (hexojs/hexo#2400)
 */
 hexo.extend.filter.register('after_post_render', function (data) {
-    data.content = data.content ? patchCodeHighlight(data.content) : data.content;
-    data.excerpt = data.excerpt ? patchCodeHighlight(data.excerpt) : data.excerpt;
+    //data.content = data.content ? patchCodeHighlight(data.content) : data.content;
+    //data.excerpt = data.excerpt ? patchCodeHighlight(data.excerpt) : data.excerpt;
     return data;
 });
