@@ -20,6 +20,10 @@ code[class*=language-], pre[class*=language-] {
   font-size: 0.9rem;
 }
 
+pre code {
+  padding: 0;
+}
+
 /* customize icon font http://app.fontastic.me */
 @font-face {
   font-family: "untitled-font-1";
