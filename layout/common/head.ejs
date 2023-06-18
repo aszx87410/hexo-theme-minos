@@ -50,7 +50,7 @@ if (languages.length > 1) {
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
 
-<%- css('css/bulma') %>
+<%- css('css/bulma.css?v=2') %>
 
 <% if (!(has_config('plugins.gallery') && get_config('plugins.gallery') === false)) { %>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
@@ -59,7 +59,7 @@ if (languages.length > 1) {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/<%= get_config('article.highlight', 'prism-tomorrow') %>.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
-<%- css('css/style') %>
+<%- css('css/style.css?v=2') %>
 
 <% /* NOTE: disable fontawesome
 <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>*/ %>

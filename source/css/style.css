@@ -21,7 +21,7 @@
 
 body.dark-mode {
   --main-text-color: #f8f8f8;
-  --main-bg-color: #0b2138;
+  --main-bg-color: #061320;
   --main-border-color: #dbdbdb;
   --title-text-color: #fafafa;
   --link-text-color: #27ebda;
@@ -142,7 +142,7 @@ a.tag.article-tag {
 
 .navbar-main {
   border-bottom: 1px solid #dbdbdb;
-  transition: 0.1s ease-in; }
+  }
   .navbar-main .navbar-logo {
     font-size: 1.5rem;
     font-weight: 600; }
