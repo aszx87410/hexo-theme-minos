@@ -1,5 +1,4 @@
 (function ($) {
-    // dark mode
     document.querySelector('.btn-dark-mode').addEventListener('click', function(e) {
         e.preventDefault()
         let setToDarkMode = !document.body.classList.contains('dark-mode')
