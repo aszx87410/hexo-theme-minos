@@ -1,5 +1,42 @@
 @charset "UTF-8";
 /* custom */
+
+:root {
+  --main-text-color: #4a4a4a;
+  --main-bg-color: white;
+  --main-border-color: #dbdbdb;
+  --title-text-color: #363636;
+  --link-text-color: #3273dc;
+  --link-hover-text-color: #363636;
+  --code-bg-color: whitesmoke;
+  --code-text-color: #ff3860;
+  --tag-bg-color: whitesmoke;
+  --tag-text-color: #363636;
+  --quote-bg-color: whitesmoke;
+  --nav-link-text-color: darkgray;
+  --notice-bg-color: #ffe4c4;
+  --archive-time-color: #888;
+  --archive-hover-border-color: black;
+}
+
+body.dark-mode {
+  --main-text-color: #f8f8f8;
+  --main-bg-color: #0b2138;
+  --main-border-color: #dbdbdb;
+  --title-text-color: #fafafa;
+  --link-text-color: #27ebda;
+  --link-hover-text-color: #98fff6;
+  --code-bg-color: #324b7e;
+  --code-text-color: #f7f7f7;
+  --tag-bg-color: whitesmoke;
+  --tag-text-color: #363636;
+  --quote-bg-color: #49495e;
+  --nav-link-text-color: #b4b5b4;
+  --notice-bg-color: #257800;
+  --archive-time-color: #ddd;
+  --archive-hover-border-color: #51ce97;
+}
+
 body {
   font-size: 1.1rem; }
 
@@ -14,6 +51,13 @@ body {
 
 .section-categories .content, .article.content {
   margin-bottom: 0; }
+
+.self-notice {
+  margin-bottom: 1rem; 
+  padding: 12px 24px; 
+  border-radius: 12px; 
+  background: var(--notice-bg-color);
+}
 
 /* override prism  */
 code[class*=language-], pre[class*=language-] {
@@ -92,8 +136,7 @@ a.tag.article-tag {
   .container {
     max-width: 800px;
     width: 800px; }
-  .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
-    color: #3273dc; }
+
   .flexbox {
     display: flex; } }
 
@@ -106,7 +149,7 @@ a.tag.article-tag {
   .navbar-main .navbar-item {
     text-align: center; }
   .navbar-main a.navbar-item.is-active {
-    color: #3273dc; }
+    color: var(--link-text-color); }
   .navbar-main .toc .navbar-dropdown {
     max-height: 500px;
     overflow-y: auto; }
@@ -121,7 +164,7 @@ a.tag.article-tag {
   border-bottom: 1px dotted transparent; }
   .article .article-title a:hover,
   .article .article-meta a:hover {
-    border-bottom-color: black; }
+    border-bottom-color: var(--title-text-color); }
 
 .article .article-meta {
   font-size: .9rem; }
@@ -148,13 +191,13 @@ a.tag.article-tag {
 
 .article .article-more-link a {
   font-size: .9rem;
-  color: darkgray;
+  color: var(--nav-link-text-color);
   border-bottom: 1px dotted transparent; }
   .article .article-more-link a:hover {
-    border-bottom-color: darkgray; }
+    border-bottom-color: var(--nav-link-text-color); }
 
 .article .article-nav a {
-  color: darkgray;
+  color: var(--nav-link-text-color);
   position: relative;
   display: inline-block; }
 
@@ -291,10 +334,10 @@ a.tag.article-tag {
   padding: 0.5rem 1.5rem;
   border-left: 3px solid transparent; }
   .archive .article:hover {
-    border-left-color: black; }
+    border-left-color: var(--archive-hover-border-color); }
   .archive .article time {
     font-size: .9rem;
-    color: #888888;
+    color: var(--archive-time-color);
     /* NOTE: 調暗一點 */ }
   .archive .article h6 {
     margin: 0; }

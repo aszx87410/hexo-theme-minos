@@ -1,4 +1,11 @@
 (function ($) {
+    // dark mode
+    document.querySelector('.btn-dark-mode').addEventListener('click', function() {
+        let setToDarkMode = !document.body.classList.contains('dark-mode')
+        localStorage.setItem('dark-mode', setToDarkMode ? 'true' : 'false')
+        document.body.classList.toggle('dark-mode')
+    })
+
     $('.navbar-burger').click(function () {
         $(this).toggleClass('is-active');
         $('.navbar-main .navbar-start').toggleClass('is-active');

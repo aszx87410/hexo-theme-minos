@@ -66,10 +66,6 @@ navbar_links:
     icon: fab fa-medium
     url: https://hulitw.medium.com/
 
-  Twitter:
-    icon: fab fa-twitter
-    url: https://twitter.com/hulitw
-
   Facebook:
     icon: fab fa-facebook
     url: https://www.facebook.com/huli.blog
