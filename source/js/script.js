@@ -1,6 +1,7 @@
 (function ($) {
     // dark mode
-    document.querySelector('.btn-dark-mode').addEventListener('click', function() {
+    document.querySelector('.btn-dark-mode').addEventListener('click', function(e) {
+        e.preventDefault()
         let setToDarkMode = !document.body.classList.contains('dark-mode')
         localStorage.setItem('dark-mode', setToDarkMode ? 'true' : 'false')
         document.body.classList.toggle('dark-mode')
