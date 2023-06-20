@@ -354,8 +354,10 @@ const noI18nPath = [
 hexo.extend.helper.register('i18n_path', function (language) {
     const path = this.page.path
     const appendLanguage = isDefaultLanguage(language) ? '' : language
-    if (path.endsWith('/index.html')) {
-        const purePath =  path.replace(/^en\//, '/').replace('/index.html', '/')
+    if (path.endsWith('/index.html') || path === 'index.html') {
+        const purePath =  path.replace(/^en\//, '/')
+            .replace('/index.html', '/')
+            .replace('index.html', '')
         if (purePath.endsWith('recommend/')) {
             return '/' + appendLanguage
         }
