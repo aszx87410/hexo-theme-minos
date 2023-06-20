@@ -84,9 +84,9 @@
                 </div>
             </a>
             <% if (page_language() === 'en') { %>
-               <a class="navbar-item" href="/">中文</a>
+               <a class="navbar-item" href="<%= url_for(i18n_path('zh-tw')) %>">中文</a>
             <% } else { %>
-                <a class="navbar-item" href="/en">English</a>
+                <a class="navbar-item" href="<%= url_for(i18n_path('en')) %>">English</a>
             <% } %>
             
 

@@ -332,11 +332,44 @@ hexo.extend.helper.register('page_language', function () {
 /**
  * Get page path given a certain language tag
  */
+// workaround
+const noI18nPath = [
+    'intigriti-0123-second-order-injection',
+    'sekaictf2022-safelist-xsleak',
+    'intigriti-0822-xss-author-writeup',
+    'corctf-2022-modern-blog-writeup',
+    'googlectf-2022-horkos-writeup',
+    'justctf-2022-xsleak-writeup',
+    'angstrom-ctf-2022-writeup-en',
+    'intigriti-revenge-challenge-author-writeup',
+    'intigriti-0422-xss-challenge-author-writeup',
+    'how-much-do-you-know-about-script-type',
+    'javascript-magic-of-string-and-regexp',
+    'notes-challenge-author-writeup',
+    'erpnext-ssrf-and-xss-to-account-takeover',
+    'amelia-wordpress-plugin-sensitive-data-exposure-detail',
+    'intigriti-0222-author-writeup',
+    'how-i-hacked-glints-and-your-resume-en'
+]
 hexo.extend.helper.register('i18n_path', function (language) {
-    const path = this.page.path;
-    const lang = getPageLanguage(this.page);
-    const base = path.startsWith(lang) ? path.slice(lang.length + 1) : path;
-    return (language ? '/' + language : '') + '/' + base;
+    const path = this.page.path
+    const appendLanguage = isDefaultLanguage(language) ? '' : language
+    if (path.endsWith('/index.html')) {
+        const purePath =  path.replace(/^en\//, '/').replace('/index.html', '/')
+        if (purePath.endsWith('recommend/')) {
+            return '/' + appendLanguage
+        }
+        
+        return (appendLanguage + '/' + purePath).replace('//', '/')
+    } else {
+        const purePath =  path.replace('/en/', '/')
+        let temp = purePath.split('/')
+        if (noI18nPath.includes(temp[temp.length - 1])) {
+            return '/' + appendLanguage
+        }
+        temp.splice(temp.length - 2, 0, appendLanguage)
+        return temp.join('/').replace('//', '/')
+    }
 });
 
 /**

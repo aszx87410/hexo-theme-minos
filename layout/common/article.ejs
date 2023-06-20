@@ -25,7 +25,11 @@
             <%= `${ time.humanize() } ${ __('article.read')} (${ __('article.about') } ${ words } ${ __('article.words') })` %>
         </span>
         <% } %>
+        <% if (page_language() !== 'zh-tw' && !post.translator) { %>
+        <spen data-nosnippet class="column is-narrow">(Translated by ChatGPT)</span>
+        <% } %>
     </div>
+    
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
