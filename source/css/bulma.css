@@ -108,7 +108,7 @@ span{
     font-weight:inherit
 }
 strong{
-    color:#363636;
+    color: var(--strong-text-color);
     font-weight:700
 }
 pre{

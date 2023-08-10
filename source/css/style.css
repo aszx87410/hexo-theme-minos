@@ -17,6 +17,7 @@
   --notice-bg-color: #ffe4c4;
   --archive-time-color: #888;
   --archive-hover-border-color: black;
+  --strong-text-color: #363636;
 }
 
 body.dark-mode {
@@ -35,6 +36,7 @@ body.dark-mode {
   --notice-bg-color: #257800;
   --archive-time-color: #ddd;
   --archive-hover-border-color: #51ce97;
+  --strong-text-color: #ffdd57;
 }
 
 body {
