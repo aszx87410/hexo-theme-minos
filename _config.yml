@@ -72,7 +72,7 @@ navbar_links:
 
   RSS:
     icon: fas fa-rss
-    url: /atom.xml
+    url: /atom-ch.xml
 
 # Links at the bottom of the page.
 footer_links:
