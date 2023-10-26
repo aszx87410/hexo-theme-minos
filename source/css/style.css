@@ -66,6 +66,10 @@ code[class*=language-], pre[class*=language-] {
   font-size: 0.9rem;
 }
 
+code {
+  word-break: break-word;
+}
+
 pre code {
   padding: 0;
 }
