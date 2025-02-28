@@ -4,16 +4,24 @@
 <% const pageLanguage = page_language(page) %>
 <% const languages = display_languages();
 if (languages.length > 1) {
+    const currentHref = url_for(page.path || '');
+%>
+<link href="<%= (config.url + currentHref).replace('index.html','') %>" rel="alternate" hreflang="<%= rfc5646(pageLanguage) %>" />
+
+<%  
+    const defaultHref = url_for(i18n_path("zh-tw"));
+%>
+<link href="<%= (config.url + defaultHref).replace('index.html','') %>" rel="alternate" hreflang="x-default" />
+
+<%  
     languages.forEach((language) => {
         if (language !== 'default' && pageLanguage !== language) { 
-            const href = url_for(i18n_path(language))
+            const href = url_for(i18n_path(language));
 %>
-            <% if (is_home()) { %>
-<link href="<%= config.url + href %>" rel="alternate" hreflang="<%= rfc5646(language) %>" />
-            <% } else if(href.length >= 5)  { %>
-<link href="<%= config.url + href %>" rel="alternate" hreflang="<%= rfc5646(language) %>" />
+            <% if (is_home() || href.length >= 5) { %>
+<link href="<%= (config.url + href).replace('index.html','') %>" rel="alternate" hreflang="<%= rfc5646(language) %>" />
             <% } %>
-    <% }
+<%      }
     });
 }  %>
 
