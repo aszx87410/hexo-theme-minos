@@ -33,10 +33,14 @@ function pagination(c, m) {
 } %>
 <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
     <div class="pagination-previous<%= page.current > 1 ? '' : ' is-invisible is-hidden-mobile' %>">
-        <a href="<%= link_url(page.current - 1) %>"><%= __('nav.prev') %></a>
+        <% if (page.current > 1) { %>
+            <a href="<%= link_url(page.current - 1) %>"><%= __('nav.prev') %></a>
+        <% } %>
     </div>
     <div class="pagination-next<%= page.current < page.total ? '' : ' is-invisible is-hidden-mobile' %>">
-        <a href="<%= link_url(page.current + 1) %>"><%= __('nav.next') %></a>
+        <% if (page.current < page.total) { %>
+            <a href="<%= link_url(page.current + 1) %>"><%= __('nav.next') %></a>
+        <% } %>
     </div>
     <ul class="pagination-list is-hidden-mobile">
         <% pagination(page.current, page.total).forEach(element => { %>
