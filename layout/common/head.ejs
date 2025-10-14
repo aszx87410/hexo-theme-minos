@@ -8,20 +8,18 @@ if (languages.length > 1) {
 %>
 <link href="<%= (config.url + currentHref).replace('index.html','') %>" rel="alternate" hreflang="<%= rfc5646(pageLanguage) %>" />
 
-<%  
+<%
     const defaultHref = url_for(i18n_path("zh-tw"));
 %>
 <link href="<%= (config.url + defaultHref).replace('index.html','') %>" rel="alternate" hreflang="x-default" />
 
-<%  
+<%
     languages.forEach((language) => {
         if (language !== 'default' && pageLanguage !== language) { 
             const href = url_for(i18n_path(language));
 %>
-            <% if (is_home() || href.length >= 5) { %>
 <link href="<%= (config.url + href).replace('index.html','') %>" rel="alternate" hreflang="<%= rfc5646(language) %>" />
-            <% } %>
-<%      }
+    <% }
     });
 }  %>
 
